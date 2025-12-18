@@ -1,0 +1,184 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.title {
+  font-size: 40px;
+  text-align: center;
+}
+.card {
+  background: white;
+  border-radius: 30px; /* Дугуй булан */
+  padding: 50px 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  /* Сүүдэр эффект */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  /* Анимэйшн нэмэх */
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.img_container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 30px;
+}
+.person_img {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid white; /* Цагаан хүрээ */
+  object-fit: cover; /* Зургийг зөв харуулах */
+  margin: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.quote {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 50px;
+  height: 50px;
+  background: #667eea;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  z-index: 3;
+}
+
+/* ========================================= */
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Gradient дэвсгэр өнгө */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.author {
+  font-size: 42px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0 10px;
+  letter-spacing: 1px; /* Үсэг хоорондын зай */
+}
+.job {
+  font-size: 24px;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-transform: uppercase; /* Том үсэг */
+  letter-spacing: 2px;
+}
+.info {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  font-style: italic; /* Налуу үсэг */
+}
+.buttons {
+  display: flex;
+  gap: 15px; /* Товчны хоорондох зай */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+/* Сум товчнууд (өмнөх/дараах) */
+.arrow-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  border: 3px solid #667eea;
+  background: white;
+  font-size: 28px;
+  color: #667eea;
+  cursor: pointer;
+  /* Зөөлөн шилжилт */
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Товч дээр хулгана тавих үед */
+.arrow-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-3px); /* Дээш өргөгдөх */
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Товч дарах үед */
+.arrow-btn:active {
+  transform: translateY(0) scale(0.95); /* Доош дарагдах */
+}
+/* Үндсэн товч */
+.surprise-btn {
+  width: 100%;
+  padding: 18px 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Gradient өнгө */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px; /* Маш дугуй булан */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Товч дээр хулгана тавих */
+.surprise-btn:hover {
+  transform: translateY(-3px) scale(1.02); /* Өргөгдөж томордох */
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+/* Товч дарах */
+.surprise-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+/* Арын дугуй градиент өнгө */
+.circle-bg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  animation: pulse 2s ease-in-out infinite;
+  z-index: 1; /* Арын давхарга */
+}
+
+/* Зүрх цохилох анимэйшн */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
